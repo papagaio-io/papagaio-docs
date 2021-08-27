@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Papagaio',
   description: 'Papagaio Documentation',
-  base: '/papagaio-docs/',
+  // base: '/papagaio-docs/',
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
