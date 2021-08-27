@@ -13,7 +13,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    logo: '/papagaio.svg',
+    logo: '/images/papagaio.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/guide/' },
