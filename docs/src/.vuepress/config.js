@@ -13,7 +13,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    logo: '/images/papagaio.svg',
+    logo: 'images/papagaio.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/guide/' },
@@ -36,7 +36,6 @@ module.exports = {
       ],
     }
   },
-
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
