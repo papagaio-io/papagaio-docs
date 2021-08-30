@@ -12,4 +12,4 @@ You can add any avaiable organization that is previously created in your git sou
 
 
 
-![Add Organization](/images/add-org.png "Add Organization")
+![Add Organization](../images/add-org.png "Add Organization")
