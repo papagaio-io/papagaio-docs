@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: ../images/papagaio.svg
+heroImage: images/papagaio.svg
 actionText: Get Started →
 actionLink: /guide/
 

@@ -10,14 +10,14 @@ module.exports = {
   themeConfig: {
     repo: '',
     editLinks: false,
-    docsDir: '',
+    docsDir: 'docs',
     editLinkText: '',
     lastUpdated: false,
-    logo: '../images/papagaio.svg',
+    logo: 'images/papagaio.svg',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documentation', link: '/guide/' },
-      { text: 'Github', link: 'https://github.com/papagaio-io/papagaio-docs' }
+      { text: 'Github', link: 'https://github.com/papagaio-io/' }
     ],
     sidebar: {
       '/guide/': [
