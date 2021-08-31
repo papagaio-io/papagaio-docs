@@ -25,12 +25,16 @@ module.exports = {
           title: 'Guide',
           collapsable: false,
           children: [
-            '',
             'login',
             'Dashboard',
             'AddOrganizations',
+            'DelOrganizations',
+            'ChangeUserRole',
             'Triggers',
+            'AddGitSource',
             'installation',
+            'Swagger',
+            'UnitTests',
           ]
         }
       ],
