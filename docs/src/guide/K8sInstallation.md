@@ -152,15 +152,15 @@ stringData:
       },
       "Agola": {
         "AgolaAddr": "https://agola.yourdomain.it",
-        "AdminToken": "token admintoken"
+        "AdminToken": "YOUR_ADMIN_TOKEN"
       },
       "CmdConfig": {
        "DefaultGatewayURL": "http://localhost:8000"
       },
-      "AdminToken": "token",
+      "AdminToken": "YOUR_ADMIN_TOKEN",
       "TokenSigning": {
         "Method": "hmac",
-        "Key": "supersecretsigningkey",
+        "Key": "SECRET_KEY",
         "Duration": 3600
       },
       "LogHttpRequest": true,
