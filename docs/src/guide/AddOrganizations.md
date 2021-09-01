@@ -11,5 +11,6 @@ You can add any avaiable organization that is previously created in your git sou
 * Create: `Clicking on Create, Papagaio will create the organization in Agola with all members and owners respectively`
 
 
+Page example:
 
 ![Add Organization](../images/add-org.png "Add Organization")

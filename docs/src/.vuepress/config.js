@@ -26,15 +26,16 @@ module.exports = {
           collapsable: false,
           children: [
             'login',
+            'GitSourceCommands',
             'Dashboard',
             'AddOrganizations',
             'DelOrganizations',
             'ChangeUserRole',
             'Triggers',
-            'AddGitSource',
-            'installation',
+            'LocalInstallation',
+            'K8sInstallation',
+            'Database',
             'Swagger',
-            'UnitTests',
           ]
         }
       ],

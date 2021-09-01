@@ -9,5 +9,11 @@ papagaio user change-role
       --role string          user role(ADMINISTRATOR, DEVELOPER)
       -h, --help   help for change-role
       --token string         token
-example: papagaio user change-role --id {userId} --role ADMINISTRATOR --token {papagaioAdminToken}
 ```
+
+example:
+```
+ papagaio user change-role --id {userId} 
+                           --role ADMINISTRATOR 
+                           --token {papagaioAdminToken}
+ ```
