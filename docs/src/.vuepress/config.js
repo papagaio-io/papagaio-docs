@@ -27,15 +27,17 @@ module.exports = {
           children: [
             'login',
             'GitSourceCommands',
-            'Dashboard',
             'AddOrganizations',
+            'Dashboard',
             'DelOrganizations',
             'ChangeUserRole',
             'Triggers',
+            'ExternalEmails',
             'LocalInstallation',
             'K8sInstallation',
             'Database',
             'Swagger',
+            'UsingBuildah',
           ]
         }
       ],

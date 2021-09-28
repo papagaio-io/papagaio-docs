@@ -6,7 +6,9 @@ Papagaio supports 3 gitsources with Oauth2 authentication
 * Github
 * GitLab 
 
-Once you have your Organization created in one of the Git's above you can add a git source in Papagaio.
+In order to login with your git source in Papagaio, you must have an Organization created in one of the Git's above. 
+
+You can use Papagaio's CLI to add a git source.
 
 Login page example:
 

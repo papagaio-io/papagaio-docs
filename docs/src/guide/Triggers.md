@@ -1,9 +1,10 @@
 # Triggers Configuration
 
-Papagaio synchronizes information between Agola and the Gitsources and here you can configure the time interval. 
-Also this is necessary to be aligned in case of communication problems between the systems.
+Papagaio keeps synchronized information between Agola and the Git sources, in case of communication problems between the systems.
 
-* Organizations trigger: 
+Here you can configure the time interval for three types of triggers. 
+
+* Organizations: 
 
   To synchronize all Organizations projects/branches with Agola for all repositories in Papagaio.
 
@@ -13,18 +14,21 @@ Also this is necessary to be aligned in case of communication problems between t
 
   Papagaio takes care if a webhook fails, this trigger fixes it.  
 
-* Failed runs trigger: 
+* Failed runs: 
 
   Updates info in the Dashboard.
-  Send an e-mail to the person who executed the "push", to all the project owners and an external user (external user is under construction)
+
+  Send an e-mail to the person who executed the "push", to all the project owners and also to a list of external users
  
   Synchronizes with Agola : date, time duration and the url link of every last succeded/failed run of all branches in Papagaio.
   This trigger keeps the last 10 runs ordered by date to manage the e-mail sending. 
 
-* User trigger:
+* User:
 
-  Synchronizes all users like if a user is deleted from git it also deletes in Papagaio.
-  if the user is no longer owner (or deleted in git), another user who is owner is connected to the organization is assigned.
+  Synchronizes all users in case their roles change or a user is deleted from the git source.
+
+  If a user is a project owner is deleted in git, Papagaio assigns automaticaly another user to be owner to that organization.
+  
   Refreshes access tokens (expiration)
 
 
