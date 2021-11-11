@@ -6,13 +6,11 @@ Here you can configure the time interval for three types of triggers.
 
 * Organizations: 
 
-  To synchronize all Organizations projects/branches with Agola for all repositories in Papagaio.
+  Synchronize Organizations's projects and members with Agola and the Git source. If the Organizations is deleted in git it will be deleted on Agola. Papagaio recreates the organization on Agola if deleted. 
 
   This function also verify if a project has Agola's folder (.agola) to be added in the Dashboard. 
 
-  Delete projects that no longer have the Agola's folder
-
-  Papagaio takes care if a webhook fails, this trigger fixes it.  
+   Papagaio takes care if a webhook fails, this trigger fixes it.  
 
 * Failed runs: 
 
