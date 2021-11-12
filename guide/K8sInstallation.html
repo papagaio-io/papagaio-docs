@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kubernetes Installation | Papagaio</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Papagaio Documentation">
+    <meta name="theme-color" content="#3eaf7c">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/papagaio-docs/assets/css/0.styles.13aefb12.css" as="style"><link rel="preload" href="/papagaio-docs/assets/js/app.829b7c22.js" as="script"><link rel="preload" href="/papagaio-docs/assets/js/2.825e7962.js" as="script"><link rel="preload" href="/papagaio-docs/assets/js/18.1ada4422.js" as="script"><link rel="prefetch" href="/papagaio-docs/assets/js/10.d78d32d5.js"><link rel="prefetch" href="/papagaio-docs/assets/js/11.d34c20a3.js"><link rel="prefetch" href="/papagaio-docs/assets/js/12.8f0d1d8a.js"><link rel="prefetch" href="/papagaio-docs/assets/js/13.4a40a11f.js"><link rel="prefetch" href="/papagaio-docs/assets/js/14.e78fe84d.js"><link rel="prefetch" href="/papagaio-docs/assets/js/15.12b3669e.js"><link rel="prefetch" href="/papagaio-docs/assets/js/16.7fad5bac.js"><link rel="prefetch" href="/papagaio-docs/assets/js/17.90521b3c.js"><link rel="prefetch" href="/papagaio-docs/assets/js/19.169c47b1.js"><link rel="prefetch" href="/papagaio-docs/assets/js/20.dc4c24fe.js"><link rel="prefetch" href="/papagaio-docs/assets/js/21.96bf7bdc.js"><link rel="prefetch" href="/papagaio-docs/assets/js/22.f30c28c5.js"><link rel="prefetch" href="/papagaio-docs/assets/js/3.ef61e8da.js"><link rel="prefetch" href="/papagaio-docs/assets/js/4.b9653897.js"><link rel="prefetch" href="/papagaio-docs/assets/js/5.fdd324df.js"><link rel="prefetch" href="/papagaio-docs/assets/js/6.f57a73b8.js"><link rel="prefetch" href="/papagaio-docs/assets/js/7.c17d287f.js"><link rel="prefetch" href="/papagaio-docs/assets/js/8.b79d1040.js"><link rel="prefetch" href="/papagaio-docs/assets/js/9.b59c46df.js">
+    <link rel="stylesheet" href="/papagaio-docs/assets/css/0.styles.13aefb12.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/papagaio-docs/" class="home-link router-link-active"><img src="images/papagaio.svg" alt="Papagaio" class="logo"> <span class="site-name can-hide">Papagaio</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/papagaio-docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/papagaio-docs/guide/" class="nav-link router-link-active">
+  Documentation
+</a></div><div class="nav-item"><a href="https://github.com/papagaio-io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/papagaio-docs/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/papagaio-docs/guide/" class="nav-link router-link-active">
+  Documentation
+</a></div><div class="nav-item"><a href="https://github.com/papagaio-io/" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/papagaio-docs/guide/login.html" class="sidebar-link">Login Page</a></li><li><a href="/papagaio-docs/guide/GitSourceCommands.html" class="sidebar-link">Git Source commands</a></li><li><a href="/papagaio-docs/guide/AddOrganizations.html" class="sidebar-link">Add Organization</a></li><li><a href="/papagaio-docs/guide/Dashboard.html" class="sidebar-link">Dashboard</a></li><li><a href="/papagaio-docs/guide/DelOrganizations.html" class="sidebar-link">Deleting an Organization</a></li><li><a href="/papagaio-docs/guide/ChangeUserRole.html" class="sidebar-link">Change User Role</a></li><li><a href="/papagaio-docs/guide/Triggers.html" class="sidebar-link">Triggers Configuration</a></li><li><a href="/papagaio-docs/guide/ExternalEmails.html" class="sidebar-link">External Email</a></li><li><a href="/papagaio-docs/guide/LocalInstallation.html" class="sidebar-link">Local Installation</a></li><li><a href="/papagaio-docs/guide/K8sInstallation.html" aria-current="page" class="active sidebar-link">Kubernetes Installation</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-pv-yml" class="sidebar-link">Example of pv.yml</a></li><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-claim-yml" class="sidebar-link">Example of claim.yml</a></li><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-deployment-yml" class="sidebar-link">Example of deployment.yml</a></li><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-ingress-yml" class="sidebar-link">Example of ingress.yml</a></li><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-service-yml" class="sidebar-link">Example of service.yml</a></li><li class="sidebar-sub-header"><a href="/papagaio-docs/guide/K8sInstallation.html#example-of-secret-yml" class="sidebar-link">Example of secret.yml</a></li></ul></li><li><a href="/papagaio-docs/guide/Database.html" class="sidebar-link">Database</a></li><li><a href="/papagaio-docs/guide/Swagger.html" class="sidebar-link">Swagger</a></li><li><a href="/papagaio-docs/guide/UsingBuildah.html" class="sidebar-link">Using Buildah</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="kubernetes-installation"><a href="#kubernetes-installation" class="header-anchor">#</a> Kubernetes Installation</h1> <p>This page will guide you to deploy Papagaio on Kubernetes environment using this examples.</p> <h2 id="example-of-pv-yml"><a href="#example-of-pv-yml" class="header-anchor">#</a> Example of pv.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-papagaio-dev
+  namespace: ci-dev
+spec:
+  storageClassName: nfs
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  nfs:
+    server: 10.100.132.33
+    path: /zdata/papagaio-dev
+</code></pre></div><h2 id="example-of-claim-yml"><a href="#example-of-claim-yml" class="header-anchor">#</a> Example of claim.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: claim-papagaio-dev
+  namespace: ci-dev
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: nfs
+  resources:
+    requests:
+      storage: 10Gi
+  volumeName: &quot;pv-papagaio-dev&quot;
+</code></pre></div><h2 id="example-of-deployment-yml"><a href="#example-of-deployment-yml" class="header-anchor">#</a> Example of deployment.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    app: papagaio
+  name: papagaio
+  namespace: ci-dev
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: papagaio
+  template:
+    metadata:
+      labels:
+        app: papagaio
+    spec:
+      containers:
+        - image: hub.docker.com/tulliobotti/papagaio:latest
+          imagePullPolicy: Always
+          name: papagaio
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          volumeMounts:
+            - name: papagaio-conf
+              mountPath: /bin/config.json
+              subPath: config
+            - name: papagaio-persistent-storage
+              mountPath: /mnt/papagaio-data       
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+      restartPolicy: Always
+      volumes:
+        - name: papagaio-conf
+          secret:
+            secretName: papagaio-secret
+            items:
+              - key: config.json
+                path: config
+        - name: papagaio-persistent-storage
+          persistentVolumeClaim:
+            claimName: claim-papagaio-dev
+</code></pre></div><h2 id="example-of-ingress-yml"><a href="#example-of-ingress-yml" class="header-anchor">#</a> Example of ingress.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: papagaio
+  namespace: ci-dev
+spec:
+  rules:
+    - host: papagaio.yourdomain.it
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: papagaio
+              servicePort: 8000
+</code></pre></div><h2 id="example-of-service-yml"><a href="#example-of-service-yml" class="header-anchor">#</a> Example of service.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: v1
+kind: Service
+metadata:
+  name: papagaio
+  namespace: ci-dev
+  labels:
+    app: papagaio
+spec:
+  ports:
+    - port: 8000
+      name: papagaio
+      protocol: TCP
+      targetPort: 8000
+  selector:
+    app: papagaio
+  type: ClusterIP
+</code></pre></div><h2 id="example-of-secret-yml"><a href="#example-of-secret-yml" class="header-anchor">#</a> Example of secret.yml</h2> <div class="language- extra-class"><pre class="language-text"><code>apiVersion: v1
+kind: Secret
+metadata:
+  name: papagaio-secret
+  namespace: ci-dev
+stringData:
+  config.json: |
+    {
+      &quot;Server&quot;: {
+        &quot;Port&quot;: &quot;8000&quot;,
+        &quot;LocalHostAddress&quot;: &quot;https://papagaio.yourdomain.it&quot;,
+        &quot;ApiExposedURL&quot;: &quot;https://papagaio.yourdomain.it/api&quot;
+      },
+      &quot;Database&quot;: {
+        &quot;DbPath&quot; : &quot;/mnt/papagaio-data/badger&quot;,
+        &quot;DbName&quot;: &quot;papagaio-api&quot;
+      },
+      &quot;Agola&quot;: {
+        &quot;AgolaAddr&quot;: &quot;https://agola.yourdomain.it&quot;,
+        &quot;AdminToken&quot;: &quot;YOUR_ADMIN_TOKEN&quot;
+      },
+      &quot;CmdConfig&quot;: {
+       &quot;DefaultGatewayURL&quot;: &quot;http://localhost:8000&quot;
+      },
+      &quot;AdminToken&quot;: &quot;YOUR_ADMIN_TOKEN&quot;,
+      &quot;TokenSigning&quot;: {
+        &quot;Method&quot;: &quot;hmac&quot;,
+        &quot;Key&quot;: &quot;SECRET_KEY&quot;,
+        &quot;Duration&quot;: 3600
+      },
+      &quot;LogHttpRequest&quot;: true,
+      &quot;TriggersConfig&quot;: {
+        &quot;OrganizationsDefaultTriggerTime&quot;: 5,
+        &quot;RunFailedDefaultTriggerTime&quot;: 5,
+        &quot;UsersDefaultTriggerTime&quot;: 1440,
+        &quot;StartOrganizationsTrigger&quot;: true,
+        &quot;StartRunFailedTrigger&quot;: true,
+        &quot;StartUsersTrigger&quot;: true
+      },
+      &quot;Email&quot;: {
+        &quot;SMTPServer&quot;: &quot;mail.yourserver.it&quot;,
+        &quot;SMTPPort&quot;: 25,
+        &quot;Username&quot;: &quot;mailuser&quot;,
+        &quot;Password&quot;: &quot;mailpass&quot;,
+        &quot;From&quot;: &quot;Papagaio &lt;no-reply@yourdomain.it&gt;&quot;,
+        &quot;Encryption&quot;: &quot;NONE&quot;
+      }
+    }
+
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/papagaio-docs/guide/LocalInstallation.html" class="prev">
+        Local Installation
+      </a></span> <span class="next"><a href="/papagaio-docs/guide/Database.html">
+        Database
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/papagaio-docs/assets/js/app.829b7c22.js" defer></script><script src="/papagaio-docs/assets/js/2.825e7962.js" defer></script><script src="/papagaio-docs/assets/js/18.1ada4422.js" defer></script>
+  </body>
+</html>
